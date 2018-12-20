@@ -1,6 +1,6 @@
 <div class ="container">
      <h1>メモ新規作成</h1>
-      <%= form_tag "/create" do %>
+      <%= form_tag ("/create") do %>
           <div class="form-group">
                <%= label_tag "form-title", "タイトル" %>
                <%= text_field :memos, :title, id:"form-title", class:"form-control" %>

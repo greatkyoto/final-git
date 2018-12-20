@@ -1,14 +1,12 @@
-
-
-
-  
-    <h1>メモ一覧</h1>
-    
-    
+    <h3>メモ一覧</h3>
         <% @memos.each do |memo| %>
         <div class = "col-sm-4">
             <div class="panel panel-warning">
-              <div class="panel-heading"><%= memo.title%></div>
+              <div class="panel-heading"><h4><%= memo.title%></h4>
+              <div class="buttons">
+              <a href="/memos/ <%=memo.id %>" data-method = "delete"><spann class= "glyphicon glyphicon-trash"></spann></a> 
+              <a href="/memos/ <%=memo.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a></div>
+              </div>
                 <div class="panel-body">
                     <%= memo.body%>
                 </div>
