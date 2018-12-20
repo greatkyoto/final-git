@@ -1,0 +1,19 @@
+
+
+
+  
+    <h1>メモ一覧</h1>
+    
+    
+        <% @memos.each do |memo| %>
+        <div class = "col-sm-4">
+            <div class="panel panel-warning">
+              <div class="panel-heading"><%= memo.title%></div>
+                <div class="panel-body">
+                    <%= memo.body%>
+                </div>
+            </div>
+        </div>    
+        <% end %>
+    
+</div>     
