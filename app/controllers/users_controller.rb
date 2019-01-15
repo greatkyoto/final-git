@@ -9,11 +9,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      #render layout: false
       flash[:success] = 'ユーザを登録しました。'
       redirect_to @user
     else
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
-      render :new
+      redirect_to "/"
     end
   end
   
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
         user = User.find(params["id"])
         user.destroy
         flash[:success] = 'Userアカウント は正常に削除されました'
-        redirect_to "/"
+        redirect_to "/signup"
   end 
   
   def show
